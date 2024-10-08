@@ -1,0 +1,1805 @@
+/* Estilos generales, aplicados a todos los tamaños de pantalla */
+.navbar {
+    background-color: #000000;
+    margin-bottom: 0;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+    margin-right: 30px;
+    color: #ffffff;
+    position: relative;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #ff87ff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.navbar-brand img {
+    width: 130px;
+}
+
+.form-control {
+   
+    font-size: 1.2rem;
+    padding: 0.6rem;
+}
+
+.navbar-toggler {
+    border-color: #ffffff;
+}
+
+.d-flex .nav-link {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-right: 20px;
+}
+
+.d-flex .nav-link:hover {
+    color: #ff87ff;
+}
+
+.input-group {
+    display: flex;
+    width: 100%; /* Se asegura de que el grupo de entrada ocupe el 100% del espacio disponible */
+    width: 900px; /* Aumenta el ancho máximo para hacerla más larga */
+    margin: 0 auto; /* Centra la barra de búsqueda */
+}
+
+.form-control {
+    flex: 1;
+    font-size: 1.2rem;
+}
+
+.btn-search {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #000000;
+    border-left: none;
+    padding: 0.2rem 0.2rem;
+    font-size: 1.3rem;
+}
+
+.btn-search:hover {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar-brand img {
+        width: 100px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        margin-right: 0;
+        padding: 5px 10px;
+    }
+
+    .d-flex {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-container {
+        padding-bottom: 10px;
+    }
+
+    .search-container .input-group {
+        width: calc(100% - 30px);
+        margin: 0 auto;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .btn-search {
+        padding: 0.3rem 0.6rem;
+    }
+
+    .navbar-toggler {
+        margin-left: 10px;
+    }
+
+    /* Estilos para las cards */
+    .row-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 10px; /* Espacio entre columnas */
+        padding: 10px;
+    }
+
+    .col-md-3 {
+        width: 100%; /* Ocupa el 100% del ancho en columnas */
+    }
+    
+    .card {
+        margin: 0;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-img-top {
+        height: 150px;
+        object-fit: cover;
+        width: 100%;
+        background-color: #f8f8f8;
+    }
+    
+    .card-body {
+        padding: 12px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.875rem;
+    }
+       
+}
+
+/* Otros estilos */
+
+
+/* Ajustes del ícono del carrito */
+.carrito-icon i {
+    font-size: 2rem; /* Tamaño del ícono del carrito */
+}
+
+/* Ajustes del Carrusel */
+/* Estilos para el primer carrusel */
+#carouselExample .carousel-item img {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Estilos para el segundo carrusel */
+.carousel-item-producto img {
+    object-fit: cover;
+}
+
+
+.carousel {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    margin-bottom: 20px;
+}
+
+/* Ajustes de las Cards */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.card:hover {
+    transform: scale(1.03); /* Zoom de 5% al hacer hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al hacer hover */
+}
+
+
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+/* Ajustes para la sección de Envíos y Métodos de Pago */
+section img {
+    max-width: 100%;
+    height: auto;
+}
+
+section .d-flex {
+    margin-bottom: 1.5rem;
+}
+
+section h4 {
+    font-size: 1.5rem;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+section .me-md-4 {
+    margin-right: 1.5rem;
+}
+
+section .mb-3 {
+    margin-bottom: 1rem;
+}
+
+.flex-md-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.site-footer {
+    background-color: #26272b;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+}
+
+.site-footer hr {
+    border-top-color: #bbb;
+    opacity: 0.5;
+}
+
+.site-footer hr.small {
+    margin: 20px 0;
+}
+
+.site-footer h6 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.site-footer a {
+    color: #737373;
+}
+
+.site-footer a:hover {
+    color: #3366cc;
+    text-decoration: none;
+}
+
+.footer-links {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-links li {
+    display: block;
+}
+
+.footer-links a {
+    color: #737373;
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+    color: #3366cc;
+    text-decoration: none;
+}
+
+.footer-links.inline li {
+    display: inline-block;
+}
+
+.site-footer .social-icons {
+    text-align: right;
+}
+
+.site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: #33353d;
+}
+
+.copyright-text {
+    margin: 0;
+}
+
+@media (max-width: 991px) {
+    .site-footer [class^=col-] {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-footer {
+        padding-bottom: 0;
+    }
+
+    .site-footer .copyright-text,
+    .site-footer .social-icons {
+        text-align: center;
+    }
+}
+
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.social-icons li.title {
+    margin-right: 15px;
+    text-transform: uppercase;
+    color: #96a2b2;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.social-icons a {
+    background-color: #eceeef;
+    color: #818a91;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 44px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    transition: all .2s linear;
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: #fff;
+    background-color: #29aafe;
+}
+
+.social-icons.size-sm a {
+    line-height: 34px;
+    height: 34px;
+    width: 34px;
+    font-size: 14px;
+}
+
+.social-icons a.facebook:hover {
+    background-color: #3b5998;
+}
+
+.social-icons a.twitter:hover {
+    background-color: #00aced;
+}
+
+.social-icons a.google-plus:hover {
+    background-color: #dd4b39;
+}
+
+.social-icons a.linkedin:hover {
+    background-color: #007bb6;
+}
+
+.social-icons a.youtube:hover {
+    background-color: #bb0000;
+}
+
+.social-icons a.instagram:hover {
+    background-color: #e4405f;
+}
+
+.social-icons a.pinterest:hover {
+    background-color: #cb2027;
+}
+
+/* Estilo para el ícono de WhatsApp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-icon:hover {
+    background-color: #128C7E;
+    color: white;
+    text-decoration: none;
+}
+
+.whatsapp-icon i {
+    margin: 0;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Ajusta el padding si es necesario */
+}
+
+.faq-container h1 {
+    margin-bottom: 20px; /* Ajusta el margen inferior si es necesario */
+}
+
+.accordion {
+    width: 100%; /* O el ancho que prefieras */
+    max-width: 800px; /* Ajusta el ancho máximo si es necesario */
+    margin: 0 auto; /* Centra horizontalmente */
+    
+}
+
+
+
+
+
+
+
+
+.custom-form {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-form textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+fieldset {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  
+}
+  
+fieldset div {
+    margin-bottom: 10px;
+}
+  
+  
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+  
+
+  
+  
+.contenedor-formulario form {
+    width: 90%;
+    max-width: 700px;
+    height: 700px;
+}
+  
+.contenedor-metodos {
+    padding-bottom: 50px;
+}
+  
+.container-xl {
+    padding: 40px;
+}
+  
+.titulo-home{
+    text-align: center;
+}
+  
+.titulo-abm{
+    text-align: center ;
+}
+  
+/* Estilos para el contenedor de la tabla */
+.contenedor-tabla {
+    width: 100%;
+    max-width: 1200px; /* Ajusta según el tamaño deseado */
+    margin: 0 auto;
+    padding-top: 60px;
+    border-collapse: collapse; 
+    border-spacing: 0;
+}
+
+/* Estilos para los encabezados y celdas de la tabla */
+.contenedor-tabla th, .contenedor-tabla td {
+    border: 1px solid #ddd; /* Color más suave para el borde */
+    padding: 12px; /* Espacio alrededor del contenido */
+    text-align: left;
+}
+
+/* Estilos para los encabezados de la tabla */
+.contenedor-tabla th {
+    background-color: #f4f4f4; /* Color de fondo para los encabezados */
+    color: #333; /* Color del texto */
+    font-weight: bold;
+}
+
+/* Estilos para las filas alternas para mejorar la legibilidad */
+.contenedor-tabla tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para las filas al pasar el mouse */
+.contenedor-tabla tr:hover {
+    background-color: #eaeaea;
+}
+
+/* Hacer la tabla responsive con desplazamiento horizontal */
+@media (max-width: 768px) {
+    .contenedor-tabla {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-left: 17px; /* Mejora el desplazamiento en dispositivos móviles */
+    }
+
+    .contenedor-tabla th, .contenedor-tabla td {
+        white-space: nowrap; /* Evita el ajuste de texto para mantener la tabla en una línea */
+    }
+}
+
+
+  
+.admin-form{
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  
+    margin-top: 60px;
+    border: 1px solid black ;
+    border-radius: 10px;
+    
+    padding: 20px;
+    
+}
+  
+.titulo-auto{
+    padding-top: 30px;
+    text-align: center;
+}
+  
+.titulo-eliminar{
+  padding-top: 315px;
+  padding-bottom: 315px;
+  text-align: center;
+  color: red;
+}
+  
+.titulo-modificar{
+    padding-top: 313px;
+  padding-bottom: 313px;
+  text-align: center;
+  color: green;
+}
+  
+.form-login{
+    padding-top: 120px;
+    padding-bottom: 195px;
+}
+  
+.form-reg{
+    padding-top: 106px;
+    padding-bottom: 40px;
+}
+  
+  
+  
+
+.site-footer {
+    margin-top: auto;
+}
+
+.Carteras{
+    padding-top: 3%;
+    text-align: center;
+}
+
+
+
+
+.body-log {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../img/fondolog.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+}
+
+.wrapper {
+    width: 420px;
+    
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(9px);
+    background-color: #000000;
+    border-radius: 12px;
+    padding: 30px 40px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+
+.back-home {
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    border: none;
+    color: black;
+    display: inline-block;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    margin: 30px 105px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+
+.volver {
+    text-decoration: none;
+  
+    border: #000;
+    color: black;
+    font-size: 16px;
+   
+    border-radius: 20px;
+    border: #000;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 935px;
+  
+}
+
+
+/* Centrar el botón "Ver todos" */
+.vertodos {
+    border-radius: 20px;    /* Bordes redondos */
+    padding: 10px 20px;     /* Tamaño del botón */
+    font-size: 18px;        /* Tamaño de la fuente */
+    display: block;         /* Mostrar el botón como un bloque */
+    margin: 20px auto;      /* Centrar horizontalmente */
+    text-decoration: none;
+}
+
+.vertodos:hover{
+    background-color: rgb(216, 163, 216);       
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 500px) and (min-width: 400px) {
+    .vertodos {
+        margin: 20px auto; /* Mantener el botón centrado */
+    }
+}
+
+
+.new-amsterdam-regular {
+    font-family: "New Amsterdam", sans-serif;   
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.7rem; /* Ajusta el tamaño según tus necesidades */
+    text-align: center;
+}
+
+
+.btn-primary {
+    background-color: #007bff; /* Color de fondo inicial */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 0.5rem 1rem; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Mostrar en línea y aplicar relleno */
+    border-radius: 0.25rem; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  .btn-primary:hover {
+    background-color: #d8acd6; /* Color de fondo al pasar el cursor */
+    color: #e0e0e0; /* Color del texto al pasar el cursor */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    padding: 0.7rem 1.2rem;
+  }
+ 
+       
+        .contenedor {   
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px;
+        }
+        .imagen iframe {
+            width: 100%;
+            height: 400px;
+            
+        }
+        .formulario {
+            max-width: 500px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        .form-label {
+            font-weight: bold;
+            color: #163e61;
+        }
+        #mensaje {
+            width: 100%;
+            height: 120px;
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid #ced4da;
+        }
+        .btn-primary {
+            background-color: #3978af;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            width: 100%;
+            font-size: 16px;
+        }
+        .btn-primary:hover {
+            background-color: #d2a2b8;
+        }
+        @media (max-width: 768px) {
+            .contenedor {
+                padding: 20px;
+            }
+            .formulario {
+                padding: 15px;
+            }
+        }
+
+/* Estilos para los botones en la card */
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-comprar, .btn-ver {
+    width: 48%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #ddd; /* Borde gris claro para los botones */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-comprar {
+    background-color: #000; /* Fondo negro para el botón de Comprar */
+    color: #fff; /* Texto blanco */
+}
+
+.btn-comprar:hover {
+    background-color: #333; /* Fondo gris oscuro al pasar el mouse */
+    color: #d8acd6; /* Texto en color lila claro al pasar el mouse */
+    border-color: #d8acd6; /* Borde en color lila claro al pasar el mouse */
+}
+
+.btn-ver {
+    background-color: transparent; /* Fondo transparente para el botón Ver */
+    color: #000; /* Texto negro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-ver i {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+.btn-ver:hover {
+    background-color: #333; /* Fondo gris oscuro al pasar el mouse */
+    color: #d8acd6; /* Texto en color lila claro al pasar el mouse */
+    border-color: #d8acd6; /* Borde en color lila claro al pasar el mouse */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    text-align: center; /* Alinear el texto al centro */
+}
+
+.card-title-precio {
+    font-size: 1.50rem;
+    color: #000;
+    font-family: 'Lucida Console', monospace ; 
+    text-align: center; /* Alinear el texto al centro */
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 1 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.btn-container {
+    display: none;
+    margin-top: auto; /* Para que los botones se ubiquen en la parte inferior de la tarjeta */
+    
+}
+
+
+.btn-container .btn {
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+.card-title-precio {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.button-group {
+    display: flex;
+    
+    gap: 20px; /* Espacio entre los botones */
+    text-align: center;
+}
+
+.btn {
+    display: flex;
+    align-items: center; /* Alinea verticalmente el contenido del botón */
+    justify-content: center; /* Centra horizontalmente el contenido del botón */
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem; /* Ajusta el tamaño de la fuente según tus necesidades */
+    text-align: center; /* Alinea el texto en el centro */
+    line-height: 1.5; /* Ajusta la altura de línea para que el botón sea menos alto */
+    transition: background-color 0.3s ease; /* Suaviza la transición del color de fondo */
+}
+
+.btn-comprar {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 13px 70px; /* Botón de comprar más largo */
+}
+
+.btn-comprar:hover {
+    background-color: #ffffff;
+    color: #000000; /* Cambia el color del texto cuando se hace hover */
+}
+
+.btn-ver {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 5px; /* Botón de ver más pequeño */
+}
+
+.btn-ver:hover {
+    background-color: #f0f0f0; /* Un tono gris claro para el hover */
+}
+
+.fas.fa-eye {
+    margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+.row-cards {
+    display: flex;
+    justify-content: space-between; /* Espacio uniforme entre tarjetas */
+    
+   
+}
+
+.col-md-3 {
+    flex: 1 0 23%; /* Cada tarjeta ocupa el 23% del ancho del contenedor */
+    max-width: 23%; /* Limita el ancho máximo al 23% */
+    box-sizing: border-box;
+}
+
+.card {
+    margin: 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-top {
+    
+    object-fit: cover;
+    width: 100%;
+    background-color: #f8f8f8;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.row-cards {
+    display: flex;
+    justify-content: space-between; /* Espacio uniforme entre tarjetas */
+}
+
+.col-md-3 {
+    flex: 1 0 23%; /* Cada tarjeta ocupa el 23% del ancho del contenedor */
+    max-width: 23%; /* Limita el ancho máximo al 23% */
+    box-sizing: border-box;
+}
+
+.card {
+    margin: 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-top {
+    object-fit: cover;
+    width: 100%;
+    background-color: #f8f8f8;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar-brand img {
+        width: 100px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        margin-right: 0;
+        padding: 5px 10px;
+    }
+
+    .d-flex {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-container {
+        padding-bottom: 10px;
+    }
+
+    .search-container .input-group {
+        width: calc(100% - 30px);
+        margin: 0 auto;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .btn-search {
+        padding: 0.3rem 0.6rem;
+    }
+
+    .navbar-toggler {
+        margin-left: 10px;
+    }
+
+    /* Estilos para las cards utilizando Flexbox */
+    .row-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Espacio entre columnas */
+    }
+    
+    .col-md-3 {
+        flex: 0 0 calc(50% - 10px); /* Cada columna ocupará el 50% del ancho menos el gap */
+        max-width: calc(50% - 10px); /* Limita el ancho al 50% */
+    }
+    
+    .card {
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        min-height: 200px; /* Hace que la tarjeta sea más larga */
+    }
+    
+    .card-img-top {
+        height: 200px; /* Aumenta la altura de la imagen para que sea más prominente */
+        object-fit: cover;
+        background-color: #f8f8f8;
+    }
+    
+    .card-body {
+        padding: 12px;
+        flex-grow: 1; /* Asegura que el cuerpo de la tarjeta ocupe más espacio vertical */
+    }
+    
+    .card-title {
+        font-size: 1.25rem; /* Tamaño más grande para el título */
+    }
+    
+    .card-text {
+        font-size: 1rem; /* Tamaño más grande para el texto */
+    }
+    
+    .btn-primary {
+        padding: 10px 15px; /* Tamaño más grande para el botón */
+        font-size: 0.875rem;
+    }
+
+    /* PRODUCTOS  */
+    
+
+    h2.new-amsterdam-regular {
+        margin-bottom: 30px; /* Espacio debajo del título */
+        font-size: 2rem; /* Tamaño del título */
+        text-align: center; /* Centra el título */
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Espacio entre las tarjetas */
+        
+    }
+    
+    .col-md-3 {
+        flex: 0 0 calc(50% - 10px); /* Cada columna ocupará el 50% del ancho menos el gap */
+        max-width: calc(50% - 10px); /* Limita el ancho al 50% */
+        
+    }
+    
+    .button-group{
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    
+    .card-img-top-productos {
+        height: 200px; /* Ajusta la altura de la imagen */
+        object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsionarse */
+        width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+        background-color: #f8f8f8;
+    }
+    
+    
+    
+    .card-title-productos {
+        font-size: 1.25rem; /* Tamaño más grande para el título */
+        margin-bottom: 10px; /* Espacio debajo del título */
+        text-align: center;
+    }
+    
+    .card-title-precio-productos {
+        font-size: 1rem; /* Tamaño del precio */
+        margin-bottom: 13px; /* Espacio debajo del precio */
+        text-align: center;
+
+    }
+    
+    .titulo-producto{
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .btn-comprar-productos, .btn-ver-productos {
+        width: 2%; /* Cada botón ocupa el 48% del ancho del contenedor */
+        padding: 7px 1px; /* Tamaño más grande para el botón */
+        font-size: 0.875rem; /* Tamaño de fuente más pequeño */
+        text-align: center; /* Centra el texto dentro del botón */
+        text-decoration: none; /* Elimina el subrayado del enlace */
+    }
+
+    .botones-container {
+        display: flex;
+        flex-direction: column; /* Coloca los botones uno debajo del otro */
+        align-items: center; /* Centra los botones horizontalmente */
+        justify-content: center; /* Centra los botones verticalmente */
+        
+    }
+    
+    .boton-agregar,
+    .boton-volver {
+        display: inline-block;
+        margin: 10px; /* Espacio entre los botones */
+        padding: 4px 8px; /* Espacio interno de los botones */
+        border-radius: 20px;
+        text-align: center;
+        text-decoration: none;
+
+    }
+    
+    .boton-agregar {
+        background-color: #007bff;
+        color: #fff;
+        border: 1px solid #007bff;
+    }
+    
+    .boton-agregar:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+    
+    .boton-volver {
+        background-color: #f8f9fa;
+        color: #333;
+        border: 1px solid #ccc;
+    }
+    
+    .boton-volver:hover {
+        background-color: #e2e6ea;
+        border-color: #dae0e5;
+    }
+    
+    /* Estilo para el ícono dentro del botón */
+    .boton-volver i {
+        margin-right: 5px;
+    }
+    
+    
+    
+    
+    
+    
+    .btn-comprar-productos {
+        background-color: #000000; /* Color de fondo del botón "COMPRAR" */
+        color: white; /* Color del texto del botón */
+        border: 2px solid #000000; /* Borde del botón "COMPRAR" */
+        border-radius: 24px; /* Redondea las esquinas del botón */
+        
+      
+        padding: 10px 40px; /* Tamaño más grande para el botón */
+        font-size: 0.875rem; /* Tamaño de fuente más pequeño */
+       
+    }
+    
+    .btn-ver-productos {
+        background-color: #ffffff; /* Color de fondo del botón "VER" */
+        color: rgb(0, 0, 0); /* Color del texto del botón */
+        
+        text-align: center; /* Centra el texto dentro del botón */
+        text-decoration: none; /* Elimina el subrayado del enlace */
+        padding: 12px 15px; /* Tamaño más grande para el botón */
+        font-size: 0.875rem; /* Tamaño de fuente más pequeño */
+       
+    }
+    
+    .table{
+        
+        justify-content: center;
+    }
+}
+
+.total-general {
+    font-weight: bold;
+    color: #007bff; /* Puedes cambiar el color según tu preferencia */
+    font-size: 1.2rem; /* Ajusta el tamaño de fuente si es necesario */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+    .botones-container {
+        
+        flex-direction: column; /* Coloca los botones uno debajo del otro */
+        align-items: center; /* Centra los botones horizontalmente */
+        justify-content: center; /* Centra los botones verticalmente */
+        
+    }
+    
+    .boton-agregar,
+    .boton-volver {
+        display: inline-block;
+        margin: 10px; /* Espacio entre los botones */
+        padding: 4px 8px; /* Espacio interno de los botones */
+        border-radius: 20px;
+        text-align: center;
+        text-decoration: none;
+
+    }
+    
+    .boton-agregar {
+        background-color: #007bff;
+        color: #fff;
+        border: 1px solid #007bff;
+    }
+    
+    .boton-agregar:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+    
+    .boton-volver {
+        background-color: #f8f9fa;
+        color: #333;
+        border: 1px solid #ccc;
+    }
+    
+    .boton-volver:hover {
+        background-color: #e2e6ea;
+        border-color: #dae0e5;
+    }
+    
+    /* Estilo para el ícono dentro del botón */
+    .boton-volver i {
+        margin-right: 5px;
+    }
+    
+    
+
+/* Estilo para el total general */
+/* Estilo para el botón de seguir comprando */
+.btn-primary.compra {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el cuadro de mensaje */
+.message-box {
+    background-color: #f8d7da; /* Color de fondo rojo claro */
+    border: 1px solid #f5c6cb; /* Borde rojo claro */
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.message-box p {
+    margin: 0;
+    color: #721c24; /* Color del texto en rojo oscuro */
+    font-size: 1rem;
+}
+
+/* Estilo para el botón de WhatsApp */
+.whatsapp-carrito {
+    background-color: green;
+    border: 1px solid #f5c6cb; /* Borde rojo claro */
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px; /* Ajusta el padding según lo necesites */
+    display: inline-block; /* Asegura que el botón se ajuste al contenido */
+    font-size: 1rem; /* Ajusta el tamaño de fuente si es necesario */
+    text-align: center;
+    margin: 10px 0; /* Agrega margen si deseas separar el botón de otros elementos */
+}
+
+
+.btn-whatsapp:hover {
+    background-color: #128C7E; /* Color verde oscuro de WhatsApp en hover */
+}
+
+
+
+/* Estilo para los íconos de Font Awesome */
+
+.card-productos {
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+
+.card-title-productos{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.card-title-precio-productos{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.btn-comprar-productos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5;
+    border: 2px solid #000000;
+    background-color: black;
+    color: white;
+  }
+  
+  .btn-ver-productos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+  }
+  
+
+.titulo-contacto{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 10px;
+}
+
+@media (min-width: 1200px) {
+    #productos {
+        max-width: none; /* O define un valor específico */
+    }
+}
+  
+
+
+/* Estilos para la card de productos */
+.card-productos {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card-productos:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top-productos {
+    width: 100%;
+    height: auto;
+}
+
+.card-body-productos {
+    
+    text-align: center;
+}
+
+.card-title-productos {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-title-precio-productos {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn-comprar-productos {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-ver-productos {
+    background-color: #ddd;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+/* Media queries para hacer el diseño más responsive */
+@media (max-width: 768px) {
+    .card-title-productos {
+        font-size: 1rem;
+    }
+
+    .btn-comprar-productos {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .btn-ver-productos {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-title-productos {
+        font-size: 0.9rem;
+    }
+
+    .btn-comprar-productos {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+    .btn-ver-productos {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-productos {
+        margin-bottom: 20px;
+        
+        border-radius: 15px;
+        box-shadow: none;
+    }
+
+    
+    .card-title-productos,
+    .card-title-precio-productos {
+        font-size: 1rem;
+    }
+
+    .button-group {
+        display: flex;
+        
+        gap: 10px; /* Espacio entre botones */
+    }
+
+    .btn-comprar-productos,
+    .btn-ver-productos {
+        width: 100%; /* Los botones ocupan todo el ancho */
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .btn-ver-productos {
+        padding: 10px;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 70px;
+        height: 50px;
+        margin-right: 12px;
+    }
+}
+
+
+
+@media (min-width: 370px) and (max-width: 600px) {
+    #productos .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px; /* Espacio entre las cards */
+    }
+
+    .navbar-brand {
+        height: 100px; /* Ajusta la altura */
+        
+        font-size: 2em; /* Aumenta el tamaño de la fuente si es texto */
+        padding: 10px; /* Aumenta el relleno si es necesario */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card-productos {
+        margin-bottom: 20px;
+    }
+
+    /* La imagen ocupa todo el contenedor */
+    .card-img-top-productos {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsión */
+    }
+
+    /* Menos espacio entre los botones */
+    .button-group {
+        
+        gap: 5px; /* Reduce la separación entre los botones */
+    }
+
+    .btn-comprar-productos, 
+    .btn-ver-productos {
+        padding: 5px 10px; /* Reduce el padding de los botones */
+        font-size: 14px; /* Tamaño de texto más pequeño */
+    }
+}
+
+
+
+
+@media (min-width: 991px) and (max-width: 1300px) {
+    
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 5px; /* Reduce la separación entre los botones */
+    }
+
+    .btn-comprar-productos, 
+    .btn-ver-productos {
+         /* Reduce el padding de los botones */
+        margin-bottom: 10px;
+        margin-top: 6px;
+        display: flex;
+        margin-left:10px;
+    }
+
+   
+}
+
+
+@media (min-width: 600px) and (max-width: 991px) {
+    
+    
+    .navbar-brand {
+        height: 100px; /* Ajusta la altura */
+        
+        font-size: 2em; /* Aumenta el tamaño de la fuente si es texto */
+        padding: 10px; /* Aumenta el relleno si es necesario */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   
+}
+
+@media (min-width:600px) and (max-width: 2000px) {
+    
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 5px; /* Reduce la separación entre los botones */
+    }
+
+    .btn-comprar-productos, 
+    .btn-ver-productos {
+         /* Reduce el padding de los botones */
+        margin-bottom: 10px;
+        margin-top: 6px;
+        display: flex;
+        margin-left:10px;
+    }
+
+   
+}
+
+@media (min-width: 2000px) and (max-width: 3000px) {
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 5px; /* Reduce la separación entre los botones */
+    }
+
+    .btn-comprar-productos, 
+    .btn-ver-productos {
+        padding: 15px 30px; /* Aumenta el padding para hacer los botones más grandes */
+        font-size: 18px; /* Aumenta el tamaño de la fuente */
+        margin-bottom: 10px;
+        margin-top: 6px;
+        display: flex;
+        margin-left: 30px;
+    }
+}
